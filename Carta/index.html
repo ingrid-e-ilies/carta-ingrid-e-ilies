@@ -27,41 +27,12 @@
     min-height: 100dvh;
   }
 
-  /* Phone frame on larger screens */
   .stage {
     position: relative;
-    width: min(100vw, calc(100dvh * 9 / 19.5));
+    width: 100vw;
     height: 100dvh;
-    max-height: 100dvh;
     background: #000;
     overflow: hidden;
-  }
-  @media (min-width: 480px) and (min-height: 700px) {
-    .stage {
-      width: 390px;
-      height: 844px;
-      max-height: calc(100dvh - 40px);
-      border-radius: 48px;
-      box-shadow:
-        0 0 0 8px #1a1a1a,
-        0 0 0 10px #2a2a2a,
-        0 30px 80px rgba(0,0,0,0.6),
-        0 10px 30px rgba(0,0,0,0.4);
-    }
-    .stage::before {
-      /* notch / dynamic island */
-      content: "";
-      position: absolute;
-      top: 12px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 110px;
-      height: 32px;
-      background: #000;
-      border-radius: 20px;
-      z-index: 30;
-      pointer-events: none;
-    }
   }
 
   video {
